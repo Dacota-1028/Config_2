@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "C Compile",
+		"type": "shell",
+		"command": "gcc",
+		"args": [
+		  "-Wall",
+		  "-Wextra",
+		  "-std=c11",
+		  "${file}",
+		  "-o",
+		  "${workspaceFolder}/bin/${fileBasenameNoExtension}"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": "$gcc"
+	  },
+	  {
+		"label": "C++ Compile",
+		"type": "shell",
+		"command": "g++",
+		"args": [
+		  "-Wall",
+		  "-Wextra",
+		  "-std=c++17",
+		  "${workspaceFolder}/src/*.cpp",
+		  "-o",
+		  "${workspaceFolder}/bin/${workspaceFolderBasename}"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": "$gcc"
+	  }
+	]
+  }
+  
